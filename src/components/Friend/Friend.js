@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Friend = (props) => {
     
@@ -14,7 +15,7 @@ const Friend = (props) => {
         <div style={friendStyle}>
             <h2>Name:{name}</h2>
             <p>email:{email}</p>
-            <p>Id: {id}</p>
+            <p>ID:<Link to={`/friend/${id}`}>Show details of {id}</Link></p>
         </div>
     )
 }
