@@ -1,8 +1,14 @@
+import  {useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
-  const useEffect(() =>{
+  const [] = useState([])
+  
+
+  useEffect(() =>{
     fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(data => console.log(data))
   },[])
 
   return (
