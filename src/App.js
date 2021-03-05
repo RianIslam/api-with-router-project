@@ -13,10 +13,19 @@ function App() {
 
 
   return (
-    <div className="App">
-    <Home/>
+    <Router className="App">
+    <Switch>
+      <Route path="/home">
+      <Home/>
+      </Route>
+      <Route path="/">
+      <Home/>
+      </Route>
+      
+    </Switch>
+    
 
-    </div>
+    </Router>
   );
 }
 
