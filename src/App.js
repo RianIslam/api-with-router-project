@@ -2,18 +2,18 @@ import  {useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
-  const [] = useState([])
+  const [friends, setFriends] = useState([])
   
 
   useEffect(() =>{
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => setFriends(data))
   },[])
 
   return (
     <div className="App">
-
+    <h1>Frinds: {friends.length}</h1>
     </div>
   );
 }
