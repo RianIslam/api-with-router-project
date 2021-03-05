@@ -1,5 +1,6 @@
 import React from 'react'
 import  {useEffect, useState} from 'react';
+import Friend from '../Friend/Friend';
 
 const Home = () => {
     const [friends, setFriends] = useState([])
@@ -12,6 +13,9 @@ const Home = () => {
     },[])
     return (
         <div>
+         {
+      friends.map(friends =><Friend friend={friends}/>)
+    }
             
         </div>
     )

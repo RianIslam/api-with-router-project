@@ -1,5 +1,4 @@
 import './App.css';
-import Friend from './components/Friend/Friend';
 
 import {
   BrowserRouter as Router,
@@ -7,6 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Home from './components/Home/Home';
 
 
 function App() {
@@ -14,10 +14,8 @@ function App() {
 
   return (
     <div className="App">
-    <h1>Frinds: {friends.length}</h1>
-    {
-      friends.map(friends =><Friend friend={friends}/>)
-    }
+    <Home/>
+
     </div>
   );
 }
